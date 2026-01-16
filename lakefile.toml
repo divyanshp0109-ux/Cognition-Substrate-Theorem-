@@ -1,0 +1,19 @@
+name = "aristotle_solves_cst"
+version = "0.1.0"
+defaultTargets = ["CST_Verified", "Minimality"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.24.0"
+
+[[lean_lib]]
+name = "CST_Verified"
+
+[[lean_lib]]
+name = "Minimality"
+
+[[lean_exe]]
+name = "aristotle_solves_cst"
+root = "Main"

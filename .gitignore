@@ -1,0 +1,20 @@
+# Lean 4 build artifacts
+.lake/
+build/
+lake-packages/
+*.olean
+*.ilean
+*.c
+*.o
+
+# IDE state (do not track)
+.antigravity/
+.gemini/
+
+# Local backups (kept outside repo)
+mirror_backup/
+**/backup/
+
+# OS files
+.DS_Store
+Thumbs.db
