@@ -1,11 +1,39 @@
 # The Cognition Substrate Theorem (CST)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18436371.svg)](https://doi.org/10.5281/zenodo.18436371)
+
 ## Formal Verification Repository
 
 This repository contains the complete, formally verified proofs for the Cognition Substrate Theorem (CST).
 
-**Verification Tool:** Lean 4 (v4.24.0) with Mathlib
-**Automated Prover:** Aristotle
+**Verification Tool:** Lean 4 (v4.24.0) with Mathlib  
+**Automated Prover:** Aristotle  
 **Status:** ✅ Fully Verified
+
+---
+
+## Citation
+
+If you use this formalization in your research, please cite:
+
+> Pandya, D. (2026). The Cognition Substrate Theorem (CST) (Version v1). Zenodo. https://doi.org/10.5281/zenodo.18436371
+
+**BibTeX:**
+```bibtex
+@software{pandya2026cst,
+  author       = {Pandya, Divyansh},
+  title        = {The Cognition Substrate Theorem (CST)},
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v1},
+  doi          = {10.5281/zenodo.18436371},
+  url          = {https://doi.org/10.5281/zenodo.18436371}
+}
+```
+
+---
+
+## Contents
 
 ### 1. Existence Theorem
 File: `CST_Verified.lean`
@@ -27,7 +55,9 @@ File: `Minimality/MasterTheorem.lean`
 | **Belief (⊕)** | Ablation | `State = Unit` → Contradiction (Static system cannot learn) |
 | **Protocol (Φ)** | Non-Formation | No Protocol Type → System Construction Impossible |
 
-### Build Instructions
+---
+
+## Build Instructions
 
 To verify the proofs locally:
 
@@ -37,3 +67,9 @@ lake build           # Compile and check all proofs
 ```
 
 **Note:** This repository depends on `mathlib4`.
+
+---
+
+## License
+
+MIT License - See [LICENSE](LICENSE) for details.
