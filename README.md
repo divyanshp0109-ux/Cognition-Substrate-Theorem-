@@ -6,9 +6,9 @@
 
 This repository contains the complete, formally verified proofs for the Cognition Substrate Theorem (CST).
 
-**Verification Tool:** Lean 4 (v4.24.0) with Mathlib  
+**Verification Tools:** Lean 4 (v4.24.0) with Mathlib, Coq/Rocq 9.0.1  
 **Automated Prover:** Aristotle  
-**Status:** ✅ Fully Verified
+**Status:** ✅ Fully Verified (Lean 4 + Coq)
 
 ---
 
@@ -33,18 +33,22 @@ If you use this formalization in your research, please cite:
 
 ---
 
-## Contents
+## Verified In
+
+| Language | Existence Proof | Minimality Proofs | Status |
+|----------|----------------|-------------------|--------|
+| **Lean 4** (v4.24.0 + Mathlib) | `CST_Verified.lean` | `Minimality/MasterTheorem.lean` | ✅ Verified |
+| **Coq/Rocq** (9.0.1) | `coq/CST.v` | `coq/CST_Minimality.v` | ✅ Verified |
+
+---
+
+## What Is Proved
 
 ### 1. Existence Theorem
-File: `CST_Verified.lean`
-- Formalizes the 6-tuple `⟨S, T, F, ⊕, J, Φ⟩`
-- Proves the existence of a valid Cognitive Substrate using constructive Minimal Types (Unit).
-- **Status:** Verified
+Formalizes the 6-tuple `⟨S, T, F, ⊕, J, Φ⟩` and proves the existence of a valid Cognitive Substrate using constructive Minimal Types (Unit).
 
 ### 2. Minimality Theorems (Necessity)
-File: `Minimality/MasterTheorem.lean`
-- Proves that **all 6 components** are strictly necessary.
-- Uses **two proof strategies**:
+Proves that **all 6 components** are strictly necessary, using **two proof strategies**:
 
 | Component | Strategy | Description |
 |---|---|---|
@@ -55,17 +59,7 @@ File: `Minimality/MasterTheorem.lean`
 | **Belief (⊕)** | Ablation | `State = Unit` → Contradiction (Static system cannot learn) |
 | **Protocol (Φ)** | Non-Formation | No Protocol Type → System Construction Impossible |
 
----
-
-## Multi-Language Formalizations
-
-The CST has been independently verified in additional proof languages:
-
-| Language | Status | Files |
-|----------|--------|-------|
-| **Coq/Rocq 9.0** | ✅ Verified | [`coq/CST.v`](coq/CST.v), [`coq/CST_Minimality.v`](coq/CST_Minimality.v) |
-
-See [`coq/README.md`](coq/README.md) for build instructions.
+Both the Lean 4 and Coq formalizations prove the same theorems independently.
 
 ---
 
