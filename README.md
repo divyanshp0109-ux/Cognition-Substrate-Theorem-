@@ -57,7 +57,19 @@ File: `Minimality/MasterTheorem.lean`
 
 ---
 
-## Build Instructions
+## Multi-Language Formalizations
+
+The CST has been independently verified in additional proof languages:
+
+| Language | Status | Files |
+|----------|--------|-------|
+| **Coq/Rocq 9.0** | ✅ Verified | [`coq/CST.v`](coq/CST.v), [`coq/CST_Minimality.v`](coq/CST_Minimality.v) |
+
+See [`coq/README.md`](coq/README.md) for build instructions.
+
+---
+
+## Build Instructions (Lean 4)
 
 To verify the proofs locally:
 

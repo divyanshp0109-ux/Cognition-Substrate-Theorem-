@@ -7,6 +7,14 @@ lake-packages/
 *.c
 *.o
 
+# Coq/Rocq build artifacts
+*.vo
+*.vok
+*.vos
+*.glob
+*.aux
+.lia.cache
+
 # IDE state (do not track)
 .antigravity/
 .gemini/
