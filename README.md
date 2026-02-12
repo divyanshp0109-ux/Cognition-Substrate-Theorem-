@@ -6,9 +6,9 @@
 
 This repository contains the complete, formally verified proofs for the Cognition Substrate Theorem (CST).
 
-**Verification Tools:** Lean 4 (v4.24.0) with Mathlib, Coq/Rocq 9.0.1  
+**Verification Tools:** Lean 4 (v4.24.0) with Mathlib, Coq/Rocq 9.0.1, Isabelle 2025  
 **Automated Prover:** Aristotle  
-**Status:** ✅ Fully Verified (Lean 4 + Coq)
+**Status:** ✅ Fully Verified (Lean 4 + Coq + Isabelle/HOL)
 
 ---
 
@@ -35,10 +35,13 @@ If you use this formalization in your research, please cite:
 
 ## Verified In
 
-| Language | Existence Proof | Minimality Proofs | Status |
-|----------|----------------|-------------------|--------|
-| **Lean 4** (v4.24.0 + Mathlib) | `CST_Verified.lean` | `Minimality/MasterTheorem.lean` | ✅ Verified |
-| **Coq/Rocq** (9.0.1) | `coq/CST.v` | `coq/CST_Minimality.v` | ✅ Verified |
+| Language | Logic | Existence Proof | Minimality Proofs | Status |
+|----------|-------|----------------|-------------------|--------|
+| **Lean 4** (v4.24.0 + Mathlib) | Dependent Type Theory | `CST_Verified.lean` | `Minimality/MasterTheorem.lean` | ✅ Verified |
+| **Coq/Rocq** (9.0.1) | Calculus of Inductive Constructions | `coq/CST.v` | `coq/CST_Minimality.v` | ✅ Verified |
+| **Isabelle/HOL** (2025) | Classical Higher-Order Logic | `isabelle/CST.thy` | `isabelle/CST_Minimality.thy` | ✅ Verified |
+
+> The theorem holds across three fundamentally different logical foundations.
 
 ---
 
@@ -59,7 +62,7 @@ Proves that **all 6 components** are strictly necessary, using **two proof strat
 | **Belief (⊕)** | Ablation | `State = Unit` → Contradiction (Static system cannot learn) |
 | **Protocol (Φ)** | Non-Formation | No Protocol Type → System Construction Impossible |
 
-Both the Lean 4 and Coq formalizations prove the same theorems independently.
+All three formalizations (Lean 4, Coq, Isabelle) prove the same theorems independently.
 
 ---
 
