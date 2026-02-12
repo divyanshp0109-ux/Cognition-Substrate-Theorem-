@@ -66,16 +66,26 @@ All three formalizations (Lean 4, Coq, Isabelle) prove the same theorems indepen
 
 ---
 
-## Build Instructions (Lean 4)
+## Build Instructions
 
-To verify the proofs locally:
-
+### Lean 4
 ```bash
 lake exe cache get   # Download pre-compiled Mathlib binaries
 lake build           # Compile and check all proofs
 ```
+Requires `mathlib4`.
 
-**Note:** This repository depends on `mathlib4`.
+### Coq/Rocq
+```bash
+coqc coq/CST.v
+coqc coq/CST_Minimality.v
+```
+Requires [Rocq Platform 9.0](https://github.com/coq/platform/releases). See [`coq/README.md`](coq/README.md) for environment setup.
+
+### Isabelle/HOL
+Open `isabelle/CST.thy` and `isabelle/CST_Minimality.thy` in **Isabelle/jEdit** — proofs verify automatically.
+
+Download from: https://isabelle.in.tum.de/installation.html
 
 ---
 
