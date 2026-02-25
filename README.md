@@ -1,6 +1,6 @@
 # The Cognition Substrate Theorem (CST)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18436371.svg)](https://doi.org/10.5281/zenodo.18436371)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18436370.svg)](https://doi.org/10.5281/zenodo.18436370)
 
 ## Formal Verification Repository
 
@@ -16,7 +16,7 @@ This repository contains the complete, formally verified proofs for the Cognitio
 
 If you use this formalization in your research, please cite:
 
-> Pandya, D. (2026). The Cognition Substrate Theorem (CST) (Version v1). Zenodo. https://doi.org/10.5281/zenodo.18436371
+> Pandya, D. (2026). The Cognition Substrate Theorem (CST) (Version v1). Zenodo. https://doi.org/10.5281/zenodo.18436370
 
 **BibTeX:**
 ```bibtex
@@ -26,8 +26,8 @@ If you use this formalization in your research, please cite:
   year         = 2026,
   publisher    = {Zenodo},
   version      = {v1},
-  doi          = {10.5281/zenodo.18436371},
-  url          = {https://doi.org/10.5281/zenodo.18436371}
+  doi          = {10.5281/zenodo.18436370},
+  url          = {https://doi.org/10.5281/zenodo.18436370}
 }
 ```
 
@@ -38,6 +38,7 @@ If you use this formalization in your research, please cite:
 | Language | Logic | Existence Proof | Minimality Proofs | Status |
 |----------|-------|----------------|-------------------|--------|
 | **Lean 4** (v4.24.0 + Mathlib) | Dependent Type Theory | `CST_Verified.lean` | `Minimality/MasterTheorem.lean` | ✅ Verified |
+| **Lean 4 Coalgebraic** (v4.24.0 + Mathlib) | Coalgebraic / Category Theory | `coalgebraic formalisation initial formalisation results/FinalCoalgebra.lean` | `coalgebraic formalisation initial formalisation results/CST_Coalgebraic.lean` | 🔄 Initial results verified |
 | **Coq/Rocq** (9.0.1) | Calculus of Inductive Constructions | `coq/CST.v` | `coq/CST_Minimality.v` | ✅ Verified |
 | **Isabelle/HOL** (2025) | Classical Higher-Order Logic | `isabelle/CST.thy` | `isabelle/CST_Minimality.thy` | ✅ Verified |
 
@@ -68,12 +69,20 @@ All three formalizations (Lean 4, Coq, Isabelle) prove the same theorems indepen
 
 ## Build Instructions
 
-### Lean 4
+### Lean 4 (Type-Theoretic)
 ```bash
 lake exe cache get   # Download pre-compiled Mathlib binaries
 lake build           # Compile and check all proofs
 ```
 Requires `mathlib4`.
+
+### Lean 4 (Coalgebraic — Work in Progress)
+See [`coalgebraic formalisation initial formalisation results/README.md`](coalgebraic%20formalisation%20initial%20formalisation%20results/README.md) for full details.
+```bash
+lake exe cache get
+lake env lean "coalgebraic formalisation initial formalisation results/CST_Coalgebraic.lean"
+lake env lean "coalgebraic formalisation initial formalisation results/FinalCoalgebra.lean"
+```
 
 ### Coq/Rocq
 ```bash
