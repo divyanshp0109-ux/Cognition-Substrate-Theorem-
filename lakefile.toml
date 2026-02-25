@@ -1,6 +1,6 @@
 name = "aristotle_solves_cst"
 version = "0.1.0"
-defaultTargets = ["CST_Verified", "Minimality"]
+defaultTargets = ["CST_Verified", "Minimality", "CST_Coalgebraic"]
 
 [[require]]
 name = "mathlib"
@@ -13,6 +13,9 @@ name = "CST_Verified"
 
 [[lean_lib]]
 name = "Minimality"
+
+[[lean_lib]]
+name = "CST_Coalgebraic"
 
 [[lean_exe]]
 name = "aristotle_solves_cst"
